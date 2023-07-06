@@ -1,0 +1,193 @@
+*{
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+*,*:before,*:after{
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+
+nav,footer,header,aside{display: block;}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 14px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+input,button,textarea{font-family: inherit;}
+
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner {padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul,li{list-style: none;}
+img{vertical-align: top;}
+
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
+
+/* Google fonts */
+/* font-family: 'Nunito', sans-serif;
+font-family: 'Open Sans', sans-serif; */
+
+html, body{
+	height: 100%;
+	line-height: 1.6;
+	font-size: 1.1rem;
+	letter-spacing: 0.02rem;
+}
+
+.wrapper {
+	min-height: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.header {
+	background-color:ghostwhite;
+}
+
+/* The beginning of the Nav Bar */
+.nav-bar-ul {
+	margin: 0;
+	text-align: center;
+	padding: 0;
+	overflow: hidden;
+	background-color: #333;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	box-shadow: 0 5px 5px rgba(182, 182, 182, 0.75);
+}
+
+.nav-bar-li-logo {
+	float: left;
+	text-transform: uppercase;
+	animation-name: fromLeftToRight;
+	animation-delay: 2s;
+	animation-timing-function: ease-in-out;
+	animation-duration: 3s;
+}
+
+@keyframes fromLeftToRight {
+	0% {
+		color: aliceblue;
+		opacity: 0.25;
+	}
+	25% {
+		color: blue;
+		opacity: 0.5;
+	}
+
+	50% {
+		color: blueviolet;
+		opacity: 0.75;
+	}
+
+	100% {
+		color: rgb(3, 242, 250);
+		opacity: 1;
+	}
+}
+
+.just-nav-links {
+	float: right;
+}
+
+.nav-bar-li-name {
+	float: left;
+}
+
+.nav-bar-li-name a, .nav-bar-li-logo a {
+	display: block;
+	color: gainsboro;
+	text-align: center;
+	padding: 0.75rem 1rem;
+	text-decoration: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.nav-bar-li-logo a {
+	cursor: default;
+	color: rgb(22 249 255 / 90%);
+}
+
+.nav-bar-li-name a:hover {
+	background-color: rgba(96, 228, 252, 0.288);
+	color: whitesmoke;
+	transition: 0.5s ease;
+}
+
+/* The ending of the Nav Bar */
+
+/* The beginning of the Mobile (Responsive) menu */
+.icon-nav-bar-set {
+	position: absolute;
+	display: none;
+	top: 0;
+	right: 0;
+}
+
+.icon-nav-bar-set:hover {
+	transform: scale3d(1.2, 1.2, 0.9);
+	transition: all 0.5s ease;
+	filter: brightness(110%);
+}
+
+@media screen and (max-width: 46em) {
+	.nav-bar-li-name,
+	.nav-bar-li-logo {
+		text-align: left;
+		float: none;
+		top: 0;
+		left: 0;
+		box-shadow: 0px 5px 4px -1.5px rgba(255, 255, 255, 0.171) inset;
+	}
+	/* Show Responsive Nav Bar */
+	.divnav.responsive a
+	{
+		display: block;
+	}
+	.nav-bar-li-name a,
+	.nav-bar-li-logo a {
+		text-align: left;
+	}
+	.nav-bar-li-name a {
+		display: none;
+	}
+	.icon-nav-bar-set {
+		display: block;
+		padding: 0.8rem 1rem;
+		text-align: right;
+	}
+	.icon-nav-bar-set a {
+		color: gainsboro;
+	}
+	.nav-bar-li-logo a {
+		font-size: 1rem;
+	}
+	.just-nav-links {
+		float: none;
+	}
+}
+
+/* The ending of the Mobile (Responsive) menu */
+
+.main {
+	flex: 1 1 auto;
+	/* background-color: rgba(166, 195, 196, 0.199); */
+}
+
+.footer {
+	background-color: ivory;
+}
